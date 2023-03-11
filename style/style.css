@@ -1,0 +1,456 @@
+/********  mobile first 570px  *********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+        height: 100vh;
+}
+
+/***       header           ***/
+
+.desktop-nav{
+        display: none;
+}
+
+.nav ul{
+    list-style:none;
+}
+.nav ul li a{
+    text-decoration: none;
+    color:  hsl(210, 4%, 67%);
+    margin-bottom: 2rem;
+}
+
+header{
+        background-image: url("/images/mobile/image-header.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        height: 100vh;
+        position: relative;
+        font-family: 'Fraunces', serif;
+        display: flex;
+        flex-direction: column;
+}
+
+.moblie-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-container ul::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -1rem;
+    border-top: .6rem solid transparent;
+    border-bottom: .6rem solid white;
+    border-left: .6rem solid transparent;
+    border-right: .6rem solid white;
+}
+
+header h1{
+        color: white;
+        font-size: 40px;
+        margin: auto 0;
+}
+
+.open-menu{
+        cursor: pointer;
+        position: relative;
+}
+
+
+.logo, .open-menu{
+    margin-top:1rem ;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.moblie-nav ul {
+    position: absolute;
+    background-color: white;
+    right: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 90%;
+}
+.moblie-nav ul li {
+    margin-bottom: 1rem;
+}
+ .moblie-nav  #contact{
+    background-color:hsl(51, 100%, 49%);
+    color: black;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    margin-top: 0.3rem;
+ }
+.arrow{
+    position: absolute;
+    left: 50%;
+    top: 65%;
+}
+
+.hide{
+    display: none;
+}
+
+
+@media screen and (min-width:571px){
+
+    header {
+        background-image: url("/images/desktop/image-header.jpg");
+        background-position: center;
+        background-size: cover;
+        /* position: relative; */
+        height:90vh;
+    }
+
+    .arrow{
+        position: absolute;
+        left: 50%;
+        top: 45%;
+    }
+    
+    header h1{
+        color: white;
+        font-size: 55px;
+        margin-top: 3rem;
+        /* position: absolute; */
+}
+
+    .moblie-nav{
+        display: none;
+    }
+
+    .desktop-nav{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+    .desktop-nav ul {
+        display: flex;
+    }
+
+    .desktop-nav ul li {
+        margin-right: 1rem;
+        margin-top: 1rem;
+       }
+       .desktop-nav ul li a {
+        color: white;
+       }
+       #contact{
+        color: hsl(212, 27%, 19%);
+        background-color: white;
+        padding: 0.7rem 1rem;
+        border-radius: 25px;
+       }
+       #contact:hover{
+        background-color:rgba(62,191,250) ;
+        color: white;
+       }
+}
+
+
+/*********        section1*********************/
+.section1 article:not(:last-child){
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: 'Fraunces', serif;
+}
+
+
+
+.section1 img{
+    width: 100%;
+}
+
+
+.transform-text, .stand-text{
+    background-color:hsla(7, 99%, 70%, 0.05);
+    padding: 4rem;
+    text-align: center;
+}
+
+.stand-text button, .transform-text button{
+    padding: 0.5rem 1rem;
+    background-color:hsla(7, 99%, 70%, 0.01);
+    border: none;
+    font-family: 'Fraunces', serif;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.transform-text button::after{
+    content: "";
+    outline:4px solid hsl(51, 100%, 49%, 0.25) ;
+    display: block;
+}
+
+.stand-text button::after{
+    content: "";
+    outline:4px solid hsl(7, 99%, 70%, 0.25) ;
+    display: block;
+}
+
+
+
+.transform-text h2, .transform-text p, .stand-text h2, .stand-text p{
+    margin-bottom: 1rem;
+}
+
+.transform-text p, .stand-text p{
+    color: hsl(210, 4%, 67%);
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+
+}
+
+.transform-text h2, .stand-text h2{
+    color:  hsl(212, 27%, 19%);
+    font-size: 30px;
+
+}
+
+@media screen and (min-width:571px){
+    .section1 article:nth-child(1){
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .section1 article:nth-child(2){
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .section1 img{
+        max-width: 50%;
+    }
+    .transform-text, .stand-text {
+        max-width: 50%;
+    }
+    
+}
+
+/*************************/
+
+.graphic{
+    background: url('/images/mobile/image-graphic-design.jpg');
+    padding: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: 'Fraunces', serif;
+    color: hsl(167, 40%, 24%);
+}
+.photography{
+    background: url('/images/mobile/image-photography.jpg');
+    padding: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Fraunces', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    color: hsl(198, 62%, 26%)
+}
+
+
+.graphic p, .photography p{
+    font-size: 18px;
+    margin-bottom:1rem ;
+    font-family: 'Barlow', sans-serif;
+}
+
+.photography h3, .graphic h3{
+    font-size: 27px;
+    margin-bottom:1rem ;
+    font-weight: 900;
+
+}
+@media screen and (min-width:571px){
+    .graphic-photo{
+        display: flex;
+        /* min-height: 50px; */
+    }
+    .graphic{
+        background: url('/images/desktop/image-graphic-design.jpg');
+        /* padding: 4.5rem; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-height: 350px;
+        width: 50%;
+    }
+    .photography{
+        background: url('/images/desktop/image-photography.jpg');
+        /* padding: 4.5rem; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-height: 350px;
+        width: 50%;
+    }
+    .photography h3, .graphic h3{
+        font-size: 18px;
+        margin-top:1rem ;
+        font-weight: 900;
+    }
+        .graphic p, .photography p{
+            font-size: 15px;
+            margin-bottom:1rem ;
+            font-family: 'Barlow', sans-serif;
+        }
+    
+}
+
+/************  section2 testmonials **********/
+
+.section2{
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    background-color:hsla(7, 99%, 70%, 0.05);
+    padding: 2rem;
+
+}
+
+.section2 h3{
+    color: hsl(210, 4%, 67%);
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    letter-spacing: 2px;
+}
+
+.client {
+    width: 70%;
+    margin: auto;
+}
+
+.client p:first-of-type{
+    color: hsl(213, 9%, 39%);
+    margin-bottom: 1rem;
+}
+
+.client-position{
+    color: hsl(210, 4%, 67%);
+    margin: 1rem 0;
+    font-size: 12px;
+}
+
+.client img{
+    width: 15%;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+
+.client h4{
+    color: hsl(212, 27%, 19%);
+    margin-top:1rem;
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+
+@media  screen and (min-width:571px){
+    .clients{
+        display: flex;
+    }
+    .client{
+        width: 50%;
+        margin-left:1rem ;
+    }
+    .client img{
+        width: 25%;
+    }
+}
+/******         section3 images  gallery         ****************/
+
+.desktop-images{
+    display: none;
+}
+
+.mobile-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+}
+
+.mobile-images div img{
+    width: 100%;
+}
+
+
+@media  screen and (min-width:571px){
+    .desktop-images{
+        display: grid;
+        grid-template-columns:repeat(4,1fr);
+    }
+    .desktop-images div img{
+        width: 100%;
+    }
+    .mobile-images{
+        display: none;
+    }
+    
+}
+/****************************/
+
+
+footer{
+    background-color: hsl(168, 34%, 50%, 0.5);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+}
+footer ul li{
+    margin-left: 1rem;
+}
+
+footer ul  li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.links li a{
+    text-decoration: none;
+    color: hsl(160, 34%, 41%);
+}
+
+.links {
+    margin: 1rem 0;
+}
+.socials {
+    margin-top: 2rem;
+ 
+}
+
+.footer-logo{
+    margin-top: 1rem;
+    width: 35%;
+}
+
+@media  screen and (min-width:571px){
+    .footer-logo{
+        margin-top: 1rem;
+        width: 25%;
+    }
+    .links  li a:hover{
+        color:white;
+    }
+}
